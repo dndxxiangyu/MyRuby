@@ -33,7 +33,10 @@ BEGIN {
 
 # 程序结束的结尾被调用
 END {
-  puts "end ruby progress"
+  puts "2end ruby progress"
+}
+END {
+  puts "1end ruby progress"
 }
 
 # 这是注释。
@@ -51,7 +54,7 @@ name = "Madisetti" # 这也是注释
 =end
 
 
-exec "ls -al"
+#exec "ls -al"
 
 
 # 程序中的空白

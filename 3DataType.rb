@@ -11,7 +11,7 @@ puts "相乘 : #{1*2*2}";
 
 # array
 array = ["fred", 0, 3.14, "this is a string", ]
-array.each { |i| puts i }
+array.each { |z| puts z }
 
 # hash
 hsh = colors = { "red" => 0xf00, "green" => 0x0f0, "blue" => 0x00f }
