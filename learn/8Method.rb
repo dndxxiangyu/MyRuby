@@ -16,6 +16,7 @@ def sample(*test)
     puts test[i]
   end
 end
+
 sample("1", 2)
 
 
@@ -27,8 +28,13 @@ class Accounts
   def reading_charge
     puts "object method"
   end
+
   def Accounts.return_date
     puts "class method"
+  end
+
+  def self.return_date2
+    puts "class method2"
   end
 end
 

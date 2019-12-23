@@ -8,6 +8,7 @@ c = ('a'..'d') #==> 'a', 'b', 'c', 'd'
 # - 条件的范围
 # - 间隔的范围
 #
+puts a.include? 5
 range1 = a.to_a
 puts range1.length
 

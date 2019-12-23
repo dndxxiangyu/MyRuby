@@ -51,6 +51,7 @@ box.setHeight(1)
 
 class Father
   BOX_COMPANY = "TATA Inc"
+
   def initialize(w, h)
     @width, @height = w, h
   end
@@ -59,9 +60,11 @@ class Father
     @area = @width * @height
     puts "father area: #{@area}"
   end
+
   def width
     @width
   end
+
   def height
     @height
   end
@@ -121,3 +124,25 @@ class ClassBox
   puts "name : #{self.name}"
 end
 classBox = ClassBox.new
+
+
+# self使用
+=begin
+1.类方法
+=end
+class WBox
+  @@count = 10
+
+  def initialize(w, h)
+    @width = w
+    @height = h
+  end
+  def self.printCount
+    puts "box is #{@@count}"
+  end
+end
+
+wBox = WBox.new 10, 20
+WBox.printCount()
+#wBox.printCount()
+
