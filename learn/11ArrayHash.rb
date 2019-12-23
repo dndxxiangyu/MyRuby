@@ -1,4 +1,7 @@
 #!/usr/bin/ruby -w
+
+require '10Module.rb'
+Trig.sin 10
 names = Array.new(20)
 puts names.length
 puts names.size

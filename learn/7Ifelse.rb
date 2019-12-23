@@ -12,6 +12,14 @@ else
   puts "a is nothing"
 end
 
+if a == 10
+  puts "a is 10"
+elsif a == 20
+  puts "a is 20"
+else
+  puts "a is nothing"
+end
+
 
 # if修饰符
 $debug = 1
@@ -80,3 +88,73 @@ end
 end
 
 # next, break, redo
+
+
+# if elsif else, 值为false或nil才是假。 then可省略
+# if修饰
+puts "debug" if 0
+# unless, 和if相反
+x = 10
+unless x > 2
+  puts "x small than 2"
+else
+  puts "x big than 2"
+end
+# unless修饰
+puts "haha" unless x
+
+# case,使用===比较when指定的expression，若一致的话就执行when内容。
+# 和 if else类似。
+$age = 10
+case
+when (1..2)
+  puts "small"
+when (9..19)
+  puts "big1"
+when (10..12) ## 不会执行到
+  puts "big2"
+end
+
+# while语句, do可省略
+$i = 1
+$num = 5
+while $i < 10 do
+  puts "#{$i} small than 10"
+  $i += 1
+end
+# while修饰符
+begin
+  puts ("in reverse")
+  $i += 1
+end while $i < $num
+
+
+# until, 和while相反
+until $age > 10 do
+  puts "age small #{$age}"
+  $age += 1;
+end
+
+begin
+  puts "haha1111"
+  $i += 1
+end until $i > $num
+
+
+# for
+for i in (1..5)
+  puts "for int #{i}"
+end
+a = 1..5
+a.each do |i|
+  puts i
+end
+
+# redo 最内部循环进行迭代。所以会死循环
+for i in 0..5
+  puts "局部变量的值为1"
+  if i < 2 then
+    puts "局部变量的值为 2#{i}"
+    redo
+  end
+end

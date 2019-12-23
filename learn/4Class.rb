@@ -25,6 +25,7 @@ class Customer
     puts "customer name #@cust_name"
     puts "customer addr #@cust_addr"
   end
+
   def total_no_of_customers
     @@no_of_customers += 1
     puts "total number of customers #@@no_of_customers"

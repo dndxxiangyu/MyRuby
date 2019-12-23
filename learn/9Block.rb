@@ -30,3 +30,20 @@ end
 test2 do
   puts "hello world"
 end
+
+
+def test32(&block)
+  block.call(10, 23)
+end
+test32 do |i, j|
+  puts "#{i}, #{j}"
+end
+
+
+# BEGIN END块
+BEGIN {
+  puts "start"
+}
+END {
+  puts "end"
+}

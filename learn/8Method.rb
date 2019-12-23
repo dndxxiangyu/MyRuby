@@ -6,12 +6,15 @@ def test(a1 = "ruby", a2 = "Perl")
 end
 
 test("ruby1", "ruby2")
-test "ruby1", "ruby2"
+test "ruby1"
 
 # 可变数量的参数
 
 def sample(*test)
   puts "length: #{test.length}"
+  for i in 0...test.length
+    puts test[i]
+  end
 end
 sample("1", 2)
 
@@ -32,3 +35,6 @@ end
 accounts = Accounts.new
 accounts.reading_charge
 Accounts.return_date
+
+# 返回值：默认最后一个语句的值
+#
