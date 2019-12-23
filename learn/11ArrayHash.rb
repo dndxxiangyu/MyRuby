@@ -1,10 +1,10 @@
 #!/usr/bin/ruby -w
-
-#require '10Module'
-#Trig.sin 10
-#names = Array.new(20)
-#puts names.length
-#puts names.size
+#$LOAD_PATH << '.'
+require './10Module'
+Trig.sin 10
+names = Array.new(20)
+puts names.length
+puts names.size
 
 names = Array.new(20) { |i| i = i + 2 }
 puts names
